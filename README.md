@@ -1,0 +1,2 @@
+# JTActiveSafety
+JTActiveSafety协议、道路运输车辆主动安全智能防控系统-主动安全通讯协议
