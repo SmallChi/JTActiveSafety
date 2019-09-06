@@ -1,7 +1,30 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <Copyright>Copyright 2019.</Copyright>
+    <Authors>SmallChi(Koike)</Authors>
+    <PackageId>JTActiveSafety</PackageId>
+    <Product>JTActiveSafety</Product>
+    <Description>基于JTActiveSafety的附件协议</Description>
+    <PackageReleaseNotes>基于JTActiveSafety的附件协议</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/SmallChi/JTActiveSafety</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/SmallChi/JTActiveSafety</PackageProjectUrl>
+    <licenseUrl>https://github.com/SmallChi/JTActiveSafety/blob/master/LICENSE</licenseUrl>
+    <license>https://github.com/SmallChi/JTActiveSafety/blob/master/LICENSE</license>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
-
+  <ItemGroup>
+    <PackageReference Include="System.Memory" Version="4.5.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 </Project>

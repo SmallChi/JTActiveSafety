@@ -1,0 +1,17 @@
+language: csharp
+solution: JTActiveSafety.sln
+dotnet: 2.2.101
+os: linux
+mono: none
+dist: trusty2
+script:
+ - dotnet restore src/JTActiveSafety.sln
+ - dotnet build src/JTActiveSafety.Protocol.Test/JTActiveSafety.Protocol.Test.csproj
+ - dotnet test src/JTActiveSafety.Protocol.Test/JTActiveSafety.Protocol.Test.csproj
+ - dotnet build src/JT808.Protocol.Extensions.JTActiveSafety.Test/JT808.Protocol.Extensions.JTActiveSafety.Test.csproj
+ - dotnet test src/JT808.Protocol.Extensions.JTActiveSafety.Test/JT808.Protocol.Extensions.JTActiveSafety.Test.csproj
+after_success:
+ - echo successful build!
+branches:
+  only:
+    - master
