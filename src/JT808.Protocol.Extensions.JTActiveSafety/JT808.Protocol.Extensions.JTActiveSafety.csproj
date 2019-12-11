@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;</TargetFrameworks>
     <LangVersion>7.3</LangVersion>
     <Copyright>Copyright 2019.</Copyright>
     <Authors>SmallChi(Koike)</Authors>
@@ -15,12 +15,29 @@
     <licenseUrl>https://github.com/SmallChi/JTActiveSafety/blob/master/LICENSE</licenseUrl>
     <license>https://github.com/SmallChi/JTActiveSafety/blob/master/LICENSE</license>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>2.1.6</Version>
+    <Version>2.2.2</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="JT808" Version="2.1.6" />
+    <Compile Remove="Formatters\JT808_0x0200_0x64_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_0x0200_0x65_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_0x0200_0x66_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_0x0200_0x67_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_0x1210_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_0x1211_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_0x1212_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_0x8103_0xF364_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_0x8103_0xF365_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_0x8103_0xF366_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_0x8103_0xF367_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_0x9208_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_0x9212_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_AlarmIdentificationProperty_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_JTActiveSafety_0x0900_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_JTActiveSafety_0x0900_USB_0xF7_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_JTActiveSafety_0x0900_USB_0xF8_Formatter.cs" />
+    <Compile Remove="Formatters\JT808_JTActiveSafety_0x8900_Formatter.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +45,14 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Formatters\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JT808" Version="2.2.2" />
   </ItemGroup>
 
 

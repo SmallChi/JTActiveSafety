@@ -1,10 +1,6 @@
 ﻿using JT808.Protocol.Extensions.JTActiveSafety.Enums;
-using JT808.Protocol.Extensions.JTActiveSafety.Formatters;
 using JT808.Protocol.Extensions.JTActiveSafety.MessageBody;
 using JT808.Protocol.MessagePack;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace JT808.Protocol.Extensions.JTActiveSafety.Extensions
 {
@@ -22,11 +18,11 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Extensions
             {
                 case JT808_JTActiveSafety_0x0900_Type.QueryState:
                     JT808MessagePackReader QueryStateMessagePackReader = new JT808MessagePackReader(jT808_JTActiveSafety_0X0900_USBMessage.MessageContent);
-                    jT808_JTActiveSafety_0X0900_USBMessage.MessageContentObejct=JT808_JTActiveSafety_0x0900_USB_0xF7_Formatter.Instance.Deserialize(ref QueryStateMessagePackReader, null);
+                    jT808_JTActiveSafety_0X0900_USBMessage.MessageContentObejct= JT808_JTActiveSafety_0x0900_USB_0xF7.Instance.Deserialize(ref QueryStateMessagePackReader, null);
                     break;
                 case JT808_JTActiveSafety_0x0900_Type.QueryInfomation:
                     JT808MessagePackReader QueryInfomationMessagePackReader = new JT808MessagePackReader(jT808_JTActiveSafety_0X0900_USBMessage.MessageContent);
-                    jT808_JTActiveSafety_0X0900_USBMessage.MessageContentObejct = JT808_JTActiveSafety_0x0900_USB_0xF7_Formatter.Instance.Deserialize(ref QueryInfomationMessagePackReader, null);
+                    jT808_JTActiveSafety_0X0900_USBMessage.MessageContentObejct = JT808_JTActiveSafety_0x0900_USB_0xF7.Instance.Deserialize(ref QueryInfomationMessagePackReader, null);
                     break;
             }
         }

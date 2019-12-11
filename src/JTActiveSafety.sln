@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JT808.Protocol.Extensions.J
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JTActiveSafety.Protocol", "JTActiveSafety.Protocol\JTActiveSafety.Protocol.csproj", "{FF716FAA-0C89-4DB9-A559-C50E502B996D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JT808.Protocol.Extensions.JTActiveSafety.Test", "JT808.Protocol.Extensions.JTActiveSafety.Test\JT808.Protocol.Extensions.JTActiveSafety.Test.csproj", "{5A5B068D-4276-4E9D-84A4-C659A86A4A6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JT808.Protocol.Extensions.JTActiveSafety.Test", "JT808.Protocol.Extensions.JTActiveSafety.Test\JT808.Protocol.Extensions.JTActiveSafety.Test.csproj", "{5A5B068D-4276-4E9D-84A4-C659A86A4A6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JTActiveSafety.Protocol.Test", "JTActiveSafety.Protocol.Test\JTActiveSafety.Protocol.Test.csproj", "{148DB5C2-A8ED-4430-8AB8-44839FC45C7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JTActiveSafety.Protocol.Test", "JTActiveSafety.Protocol.Test\JTActiveSafety.Protocol.Test.csproj", "{148DB5C2-A8ED-4430-8AB8-44839FC45C7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
