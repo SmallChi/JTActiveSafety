@@ -43,6 +43,8 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
 
         public override ushort MsgId => 0x1210;
 
+        public override string Description => "报警附件信息消息";
+
         public JT808_0x1210 Deserialize(ref JT808MessagePackReader reader, IJT808Config config)
         {
             JT808_0x1210 jT808_0X1210 = new JT808_0x1210();

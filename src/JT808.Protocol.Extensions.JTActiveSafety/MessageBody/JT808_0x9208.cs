@@ -10,6 +10,7 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
     /// </summary>
     public class JT808_0x9208:JT808Bodies, IJT808MessagePackFormatter<JT808_0x9208>
     {
+        public override string Description => "报警附件上传指令";
         public byte AttachmentServerIPLength { get; set; }
         public string AttachmentServerIP { get; set; }
         public ushort AttachmentServerIPTcpPort { get; set; }

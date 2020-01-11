@@ -9,10 +9,12 @@ JTActiveSafety协议、道路运输车辆主动安全智能防控系统-主动�
 
 ## 基于JT808扩展的JTActiveSafety消息协议
 
-### JT808扩展协议消息对照表
+## NuGet安装
 
-| 序号  | 消息ID | 完成情况 | 测试情况 | 消息体名称 |
-| :---: | :---: | :---: | :---: | :---:|
+| Package Name          | Version                                            | Downloads                                           |
+| --------------------- | -------------------------------------------------- | --------------------------------------------------- |
+| Install-Package JT808 | ![JT808](https://img.shields.io/nuget/v/JT808.svg) | ![JT808](https://img.shields.io/nuget/dt/JT808.svg) |
+| Install-Package JT808.Protocol.Extensions.JTActiveSafety| ![JT808.Protocol.Extensions.JTActiveSafety](https://img.shields.io/nuget/v/JT808.Protocol.Extensions.JTActiveSafety.svg) | ![JT808](https://img.shields.io/nuget/dt/JT808.Protocol.Extensions.JTActiveSafety.svg) |
 
 ### 使用方法
 
@@ -21,3 +23,8 @@ IServiceCollection serviceDescriptors1 = new ServiceCollection();
 serviceDescriptors1.AddJT808Configure()
                    .AddJTActiveSafetyConfigure();
 ```
+
+### JT808扩展协议消息对照表
+
+| 序号  | 消息ID | 完成情况 | 测试情况 | 消息体名称 |
+| :---: | :---: | :---: | :---: | :---:|

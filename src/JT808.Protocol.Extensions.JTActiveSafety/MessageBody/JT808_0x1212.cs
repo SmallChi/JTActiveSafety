@@ -8,6 +8,7 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
     /// </summary>
     public class JT808_0x1212 : JT808Bodies, IJT808MessagePackFormatter<JT808_0x1212>
     {
+        public override string Description => "文件上传完成消息";
         /// <summary>
         /// 文件名称长度
         /// </summary>
