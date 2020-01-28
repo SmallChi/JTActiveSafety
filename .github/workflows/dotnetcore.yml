@@ -1,0 +1,25 @@
+﻿name: .NET Core
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@master
+      with:
+        dotnet-version: 3.1.101
+    - name: dotnet info
+      run: dotnet --info
+    - name: dotnet restore
+      run: dotnet restore ./src/JTActiveSafety.sln
+    - name: dotnet JTActiveSafety.Protocol build
+      run: dotnet build ./src/JTActiveSafety.Protocol.Test/JTActiveSafety.Protocol.Test.csproj
+    - name: dotnet JT808.Protocol.Extensions.JTActiveSafety build
+      run: dotnet test ./src/JT808.Protocol.Extensions.JTActiveSafety.Test/JT808.Protocol.Extensions.JTActiveSafety.Test.csproj
+    - name: dotnet JT808.Protocol.Extensions.JTActiveSafety test
+      run: dotnet test ./src/JT808.Protocol.Extensions.JTActiveSafety.Test/JT808.Protocol.Extensions.JTActiveSafety.Test.csproj
