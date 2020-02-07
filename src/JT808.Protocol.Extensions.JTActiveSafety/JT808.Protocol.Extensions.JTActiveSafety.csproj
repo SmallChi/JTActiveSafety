@@ -19,6 +19,14 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <DocumentationFile>JT808.Protocol.Extensions.JTActiveSafety.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <DocumentationFile>JT808.Protocol.Extensions.JTActiveSafety.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Include="..\..\LICENSE">
       <Pack>True</Pack>
@@ -27,7 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="JT808" Version="2.2.6" />
+    <PackageReference Include="JT808" Version="2.2.7" />
   </ItemGroup>
 
 

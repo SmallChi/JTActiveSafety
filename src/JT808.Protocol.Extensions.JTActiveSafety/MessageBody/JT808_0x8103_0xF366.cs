@@ -9,7 +9,7 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
     /// </summary>
     public class JT808_0x8103_0xF366 : JT808_0x8103_BodyBase, IJT808MessagePackFormatter<JT808_0x8103_0xF366>
     {
-        public override uint ParamId { get; set; } = 0xF366;
+        public override uint ParamId { get; set; } = JT808_JTActiveSafety_Constants.JT808_0X8103_0xF366;
         public override byte ParamLength { get; set; } = 46;
         /// <summary>
         /// 轮胎规格型号 12位

@@ -38,5 +38,13 @@ namespace JT808.Protocol.Extensions.JTActiveSafety
         /// 盲区监测系统参数设置
         /// </summary>
         public const uint JT808_0X8103_0xF367 = 0xF367;
+        /// <summary>
+        /// 状态查询
+        /// </summary>
+        public const byte JT808_0X0900_0xF7 = 0xF7;
+        /// <summary>
+        /// 信息查询
+        /// </summary>
+        public const byte JT808_0X0900_0xF8 = 0xF8;
     }
 }

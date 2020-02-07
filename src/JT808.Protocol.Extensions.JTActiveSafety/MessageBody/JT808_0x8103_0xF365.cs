@@ -9,7 +9,7 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
     /// </summary>
     public class JT808_0x8103_0xF365 : JT808_0x8103_BodyBase, IJT808MessagePackFormatter<JT808_0x8103_0xF365>
     {
-        public override uint ParamId { get; set; } = 0xF365;
+        public override uint ParamId { get; set; } = JT808_JTActiveSafety_Constants.JT808_0X8103_0xF365;
         public override byte ParamLength { get; set; }
         /// <summary>
         /// 报警判断速度阈值

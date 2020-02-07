@@ -9,7 +9,7 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
     /// </summary>
     public class JT808_0x8103_0xF367 : JT808_0x8103_BodyBase, IJT808MessagePackFormatter<JT808_0x8103_0xF367>
     {
-        public override uint ParamId { get; set; } = 0xF367;
+        public override uint ParamId { get; set; } = JT808_JTActiveSafety_Constants.JT808_0X8103_0xF367;
         public override byte ParamLength { get; set; } = 2;
         /// <summary>
         /// 后方接近报警时间阈值

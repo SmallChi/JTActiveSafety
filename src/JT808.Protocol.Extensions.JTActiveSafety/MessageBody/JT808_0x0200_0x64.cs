@@ -13,7 +13,7 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
     /// </summary>
     public class JT808_0x0200_0x64 : JT808_0x0200_BodyBase, IJT808MessagePackFormatter<JT808_0x0200_0x64>
     {
-        public override byte AttachInfoId { get; set; } = 0x64;
+        public override byte AttachInfoId { get; set; } = JT808_JTActiveSafety_Constants.JT808_0X0200_0x64;
         public override byte AttachInfoLength { get; set; } = 32;
         /// <summary>
         /// 报警ID

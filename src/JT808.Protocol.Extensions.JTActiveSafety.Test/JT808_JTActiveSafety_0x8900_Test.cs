@@ -22,7 +22,7 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
         [Fact]
         public void Serializer()
         {
-            JT808_JTActiveSafety_0x8900 jT808UploadLocationRequest = new JT808_JTActiveSafety_0x8900
+            JT808_0x8900_0xF7 jT808UploadLocationRequest = new JT808_0x8900_0xF7
             {
                   USBCount=2,
                   MultipleUSB=new List<byte> {1,2 }
@@ -33,7 +33,7 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
         [Fact]
         public void Deserialize()
         {
-            var jT808UploadLocationRequest = JT808Serializer.Deserialize<JT808_JTActiveSafety_0x8900>("020102".ToHexBytes());
+            var jT808UploadLocationRequest = JT808Serializer.Deserialize<JT808_0x8900_0xF7>("020102".ToHexBytes());
             Assert.Equal(2, jT808UploadLocationRequest.USBCount);
             Assert.Equal(new List<byte> { 1, 2 }.ToArray().ToHexString(), jT808UploadLocationRequest.MultipleUSB.ToArray().ToHexString());
         }

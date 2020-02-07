@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
+namespace JT808.Protocol.Extensions.JTActiveSafety.Metadata
 {
-    /// <summary>
-    /// 外设消息结构
-    /// </summary>
-    public class JT808_JTActiveSafety_0x0900_USBMessage
+    public class JT808_0x0900_0xF7_USB
     {
         /// <summary>
         /// 外设ID
+        /// <see cref="JT808.Protocol.Extensions.JTActiveSafety.Enums.USBIDType"/>
         /// </summary>
         public byte USBID { get; set; }
         /// <summary>
@@ -18,12 +16,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
         /// </summary>
         public byte MessageLength { get; set; }
         /// <summary>
-        /// 消息内容
+        /// 工作状态
         /// </summary>
-        public byte[] MessageContent { get; set; }
+        public byte WorkingCondition { get; set; }
         /// <summary>
-        /// 消息内容对象
+        /// 报警状态
         /// </summary>
-        public JT808_JTActiveSafety_0x0900_USB_Base MessageContentObejct { get; set; }
+        public uint AlarmStatus { get; set; }
     }
 }
