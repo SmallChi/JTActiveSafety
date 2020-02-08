@@ -90,5 +90,11 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
             Assert.Equal(18, jT808_0X0200_0X64.VehicleSpeed);
             Assert.Equal(19, jT808_0X0200_0X64.VehicleState);
         }
+
+        [Fact]
+        public void Deserialize1()
+        {
+            var json = JT808Serializer.Analyze<JT808_0x0200>("000000010000000200BA7F0E07E4F11C0028003C00001807151010106420000000010C0605120A0B100F1100070000000D0000000E191211183100001334343434343434191210183100030200".ToHexBytes());
+        }
     }
 }
