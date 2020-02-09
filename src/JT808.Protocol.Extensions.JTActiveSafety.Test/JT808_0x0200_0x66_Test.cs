@@ -72,6 +72,7 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
             var hex = JT808Serializer.Serialize(jT808UploadLocationRequest).ToHexString();
             Assert.Equal("000000010000000200BA7F0E07E4F11C0028003C0000180715101010663B000000010C1100070000000D0000000E191211183100001334343434343434191210183100030200020400010003000500020900060008000A0007", hex);
         }
+
         [Fact]
         public void Deserialize()
         {
@@ -102,6 +103,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
             Assert.Equal(14, jT808_0X0200_0X66.Longitude);
             Assert.Equal(17, jT808_0X0200_0X66.Speed);
             Assert.Equal(19, jT808_0X0200_0X66.VehicleState);
+        }
+
+        [Fact]
+        public void Json()
+        {
+            var json = JT808Serializer.Analyze<JT808_0x0200>("000000010000000200BA7F0E07E4F11C0028003C0000180715101010663B000000010C1100070000000D0000000E191211183100001334343434343434191210183100030200020400010003000500020900060008000A0007".ToHexBytes());
         }
     }
 }

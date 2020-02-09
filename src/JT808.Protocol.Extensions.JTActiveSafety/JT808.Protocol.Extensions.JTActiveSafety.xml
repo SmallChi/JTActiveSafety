@@ -195,7 +195,7 @@
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x65.AlarmLevel">
             <summary>
-            报警/事件类型
+            报警级别
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x65.Fatigue">
