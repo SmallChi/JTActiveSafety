@@ -36,6 +36,11 @@
             盲点监测系统
             </summary>
         </member>
+        <member name="T:JT808.Protocol.Extensions.JTActiveSafety.Enums.WorkingConditionType">
+            <summary>
+            工作状态
+            </summary>
+        </member>
         <member name="F:JT808.Protocol.Extensions.JTActiveSafety.JT808_JTActiveSafety_Constants.JT808_0X0200_0x64">
             <summary>
             附加信息ID 高级驾驶辅助系统报警信息
@@ -1133,6 +1138,7 @@
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.Metadata.JT808_0x0900_0xF7_USB.WorkingCondition">
             <summary>
             工作状态
+            <see cref="T:JT808.Protocol.Extensions.JTActiveSafety.Enums.WorkingConditionType"/>
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.Metadata.JT808_0x0900_0xF7_USB.AlarmStatus">

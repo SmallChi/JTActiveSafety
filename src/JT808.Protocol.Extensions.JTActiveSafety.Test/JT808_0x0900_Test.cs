@@ -9,10 +9,10 @@ using Xunit;
 
 namespace JT808.Protocol.Extensions.JTActiveSafety.Test
 {
-    public class JT808_JTActiveSafety_0x0900_Test
+    public class JT808_0x0900_Test
     {
         JT808Serializer JT808Serializer;
-        public JT808_JTActiveSafety_0x0900_Test()
+        public JT808_0x0900_Test()
         {
             ServiceCollection serviceDescriptors = new ServiceCollection();
             serviceDescriptors.AddJT808Configure()
@@ -63,6 +63,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
         }
 
         [Fact]
+        public void Test_0xF7_3()
+        {
+            var json = JT808Serializer.Analyze<JT808_0x0900_0xF7>("020105020000000102050200000001".ToHexBytes());
+        }
+
+        [Fact]
         public void Test_0xF8_1()
         {
             JT808_0x0900_0xF8 jT808_0x0900_0xF8 = new JT808_0x0900_0xF8
@@ -103,6 +109,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
             Assert.Equal("ProductModel".Length, jT808_0x0900_0xF8.USBMessages[0].ProductModelLength);
             Assert.Equal("SoftwareVersionNumber", jT808_0x0900_0xF8.USBMessages[0].SoftwareVersionNumber);
             Assert.Equal("SoftwareVersionNumber".Length, jT808_0x0900_0xF8.USBMessages[0].SoftwareVersionNumberLength);
+        }
+
+        [Fact]
+        public void Test_0xF8_3()
+        {
+            var json = JT808Serializer.Analyze<JT808_0x0900_0xF8>("01015C0B436F6D70616E744E616D650C50726F647563744D6F64656C15486172647761726556657273696F6E4E756D62657215536F66747761726556657273696F6E4E756D626572094465766963657349440C437573746F6D6572436F6465".ToHexBytes());
         }
     }
 }

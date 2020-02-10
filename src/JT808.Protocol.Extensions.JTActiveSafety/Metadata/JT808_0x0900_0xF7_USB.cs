@@ -17,6 +17,7 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Metadata
         public byte MessageLength { get; set; }
         /// <summary>
         /// 工作状态
+        /// <see cref="JT808.Protocol.Extensions.JTActiveSafety.Enums.WorkingConditionType"/>
         /// </summary>
         public byte WorkingCondition { get; set; }
         /// <summary>

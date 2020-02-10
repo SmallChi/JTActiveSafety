@@ -8,10 +8,10 @@ using Xunit;
 
 namespace JT808.Protocol.Extensions.JTActiveSafety.Test
 {
-    public class JT808_JTActiveSafety_0x8900_Test
+    public class JT808_0x8900_Test
     {
         JT808Serializer JT808Serializer;
-        public JT808_JTActiveSafety_0x8900_Test()
+        public JT808_0x8900_Test()
         {
             ServiceCollection serviceDescriptors = new ServiceCollection();
             serviceDescriptors.AddJT808Configure()
