@@ -1,13 +1,15 @@
 ﻿using JT808.Protocol.Formatters;
+using JT808.Protocol.Interfaces;
 using JT808.Protocol.MessageBody;
 using JT808.Protocol.MessagePack;
+using System.Text.Json;
 
 namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
 {
     /// <summary>
     /// 胎压监测系统参数
     /// </summary>
-    public class JT808_0x8103_0xF366 : JT808_0x8103_BodyBase, IJT808MessagePackFormatter<JT808_0x8103_0xF366>
+    public class JT808_0x8103_0xF366 : JT808_0x8103_BodyBase, IJT808MessagePackFormatter<JT808_0x8103_0xF366>, IJT808Analyze
     {
         public override uint ParamId { get; set; } = JT808_JTActiveSafety_Constants.JT808_0X8103_0xF366;
         public override byte ParamLength { get; set; } = 46;
@@ -56,23 +58,55 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
         /// </summary>
         public byte[] Retain { get; set; } = new byte[6];
 
+        public void Analyze(ref JT808MessagePackReader reader, Utf8JsonWriter writer, IJT808Config config)
+        {
+            JT808_0x8103_0xF366 value = new JT808_0x8103_0xF366();
+            value.ParamId = reader.ReadUInt32();
+            value.ParamLength = reader.ReadByte();
+            writer.WriteNumber($"[{value.ParamId.ReadNumber()}]参数ID", value.ParamId);
+            writer.WriteNumber($"[{value.ParamLength.ReadNumber()}]参数长度", value.ParamLength);
+            string tyreSpecificationTypeHex = reader.ReadVirtualArray(12).ToArray().ToHexString();
+            value.TyreSpecificationType = reader.ReadString(12);
+            writer.WriteString($"[{tyreSpecificationTypeHex}]轮胎规格型号", value.TyreSpecificationType);
+            value.TyrePressureUnit = reader.ReadUInt16();
+            writer.WriteNumber($"[{value.TyrePressureUnit.ReadNumber()}]胎压单位", value.TyrePressureUnit);
+            value.NormalFetalPressure = reader.ReadUInt16();
+            writer.WriteNumber($"[{value.NormalFetalPressure.ReadNumber()}]正常胎压值", value.NormalFetalPressure);
+            value.ThresholdUnbalancedTirePressure = reader.ReadUInt16();
+            writer.WriteNumber($"[{value.ThresholdUnbalancedTirePressure.ReadNumber()}]胎压不平衡门限", value.ThresholdUnbalancedTirePressure);
+            value.SlowLeakageThreshold = reader.ReadUInt16();
+            writer.WriteNumber($"[{value.SlowLeakageThreshold.ReadNumber()}]慢漏气门限", value.SlowLeakageThreshold);
+            value.LowVoltageThreshold = reader.ReadUInt16();
+            writer.WriteNumber($"[{value.LowVoltageThreshold.ReadNumber()}]低压阈值", value.LowVoltageThreshold);
+            value.HighVoltageThreshold = reader.ReadUInt16();
+            writer.WriteNumber($"[{value.HighVoltageThreshold.ReadNumber()}]高压阈值", value.HighVoltageThreshold);
+            value.HighTemperatureThreshold = reader.ReadUInt16();
+            writer.WriteNumber($"[{value.HighTemperatureThreshold.ReadNumber()}]高温阈值", value.HighTemperatureThreshold);
+            value.VoltageThreshold = reader.ReadUInt16();
+            writer.WriteNumber($"[{value.VoltageThreshold.ReadNumber()}]电压阈值", value.VoltageThreshold);
+            value.TimedReportingInterval = reader.ReadUInt16();
+            writer.WriteNumber($"[{value.TimedReportingInterval.ReadNumber()}]定时上报时间间隔", value.TimedReportingInterval);
+            value.Retain = reader.ReadArray(reader.ReadCurrentRemainContentLength()).ToArray();
+            writer.WriteString("保留项", value.Retain.ToHexString());
+        }
+
         public JT808_0x8103_0xF366 Deserialize(ref JT808MessagePackReader reader, IJT808Config config)
         {
-            JT808_0x8103_0xF366 jT808_0X8103_0XF366 = new JT808_0x8103_0xF366();
-            jT808_0X8103_0XF366.ParamId = reader.ReadUInt32();
-            jT808_0X8103_0XF366.ParamLength = reader.ReadByte();
-            jT808_0X8103_0XF366.TyreSpecificationType = reader.ReadString(12);
-            jT808_0X8103_0XF366.TyrePressureUnit = reader.ReadUInt16();
-            jT808_0X8103_0XF366.NormalFetalPressure = reader.ReadUInt16();
-            jT808_0X8103_0XF366.ThresholdUnbalancedTirePressure = reader.ReadUInt16();
-            jT808_0X8103_0XF366.SlowLeakageThreshold = reader.ReadUInt16();
-            jT808_0X8103_0XF366.LowVoltageThreshold = reader.ReadUInt16();
-            jT808_0X8103_0XF366.HighVoltageThreshold = reader.ReadUInt16();
-            jT808_0X8103_0XF366.HighTemperatureThreshold = reader.ReadUInt16();
-            jT808_0X8103_0XF366.VoltageThreshold = reader.ReadUInt16();
-            jT808_0X8103_0XF366.TimedReportingInterval = reader.ReadUInt16();
-            jT808_0X8103_0XF366.Retain = reader.ReadArray(reader.ReadCurrentRemainContentLength()).ToArray();
-            return jT808_0X8103_0XF366;
+            JT808_0x8103_0xF366 value = new JT808_0x8103_0xF366();
+            value.ParamId = reader.ReadUInt32();
+            value.ParamLength = reader.ReadByte();
+            value.TyreSpecificationType = reader.ReadString(12);
+            value.TyrePressureUnit = reader.ReadUInt16();
+            value.NormalFetalPressure = reader.ReadUInt16();
+            value.ThresholdUnbalancedTirePressure = reader.ReadUInt16();
+            value.SlowLeakageThreshold = reader.ReadUInt16();
+            value.LowVoltageThreshold = reader.ReadUInt16();
+            value.HighVoltageThreshold = reader.ReadUInt16();
+            value.HighTemperatureThreshold = reader.ReadUInt16();
+            value.VoltageThreshold = reader.ReadUInt16();
+            value.TimedReportingInterval = reader.ReadUInt16();
+            value.Retain = reader.ReadArray(reader.ReadCurrentRemainContentLength()).ToArray();
+            return value;
         }
 
         public void Serialize(ref JT808MessagePackWriter writer, JT808_0x8103_0xF366 value, IJT808Config config)

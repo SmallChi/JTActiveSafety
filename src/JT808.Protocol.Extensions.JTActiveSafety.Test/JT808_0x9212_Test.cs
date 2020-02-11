@@ -57,5 +57,10 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
             Assert.Equal(30u, jT808UploadLocationRequest.DataPackages[1].Length);
             Assert.Equal(40u, jT808UploadLocationRequest.DataPackages[1].Offset);
         }
+        [Fact]
+        public void Json()
+        {
+            var json = JT808Serializer.Analyze<JT808_0x9212>("0846696C654E616D65010202000000140000000A000000280000001E".ToHexBytes());
+        }
     }
 }

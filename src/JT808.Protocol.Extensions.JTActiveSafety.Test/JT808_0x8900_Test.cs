@@ -37,5 +37,10 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
             Assert.Equal(2, jT808UploadLocationRequest.USBCount);
             Assert.Equal(new List<byte> { 1, 2 }.ToArray().ToHexString(), jT808UploadLocationRequest.MultipleUSB.ToArray().ToHexString());
         }
+        [Fact]
+        public void Json()
+        {
+            var json = JT808Serializer.Analyze<JT808_0x8900_0xF7>("020102".ToHexBytes());
+        }
     }
 }

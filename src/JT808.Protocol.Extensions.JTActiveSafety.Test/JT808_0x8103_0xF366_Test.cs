@@ -60,5 +60,10 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
             Assert.Equal("999999999999", jT808_0x8103_0xF366.TyreSpecificationType);
             Assert.Equal(10, jT808_0x8103_0xF366.VoltageThreshold);
         }
+        [Fact]
+        public void Json()
+        {
+            var json = JT808Serializer.Analyze<JT808_0x8103>("010000F366243939393939393939393939390008000400060005000300020001000A0007010203040506".ToHexBytes());
+        }
     }
 }

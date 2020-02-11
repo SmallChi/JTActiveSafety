@@ -42,5 +42,10 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
             Assert.Equal(1, jT808_0x8103_0xF367.LateralRearApproachAlarmTimeThreshold);
             Assert.Equal(2, jT808_0x8103_0xF367.RearApproachAlarmTimeThreshold);
         }
+        [Fact]
+        public void Json()
+        {
+            var json = JT808Serializer.Analyze<JT808_0x8103>("010000F367020201".ToHexBytes());
+        }
     }
 }

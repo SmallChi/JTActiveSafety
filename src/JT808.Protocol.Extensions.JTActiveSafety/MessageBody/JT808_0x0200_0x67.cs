@@ -190,15 +190,14 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
             writer.WriteString($"[{vehicleStateBits[1]}]Bit14自定义", vehicleStateBits[1].ToString());
             writer.WriteString($"[{vehicleStateBits[0]}]Bit15自定义", vehicleStateBits[0].ToString());
             writer.WriteEndObject();
-            value.AlarmIdentification = new AlarmIdentificationProperty
-            {
-                TerminalID = reader.ReadString(7),
-                Time = reader.ReadDateTime6(),
-                SN = reader.ReadByte(),
-                AttachCount = reader.ReadByte(),
-                Retain = reader.ReadByte()
-            };
-            writer.WriteString($"[{value.AlarmIdentification.TerminalID}]终端ID", value.AlarmIdentification.TerminalID);
+            value.AlarmIdentification = new AlarmIdentificationProperty();
+            string terminalIDHex = reader.ReadVirtualArray(7).ToArray().ToHexString();
+            value.AlarmIdentification.TerminalID = reader.ReadString(7);
+            value.AlarmIdentification.Time = reader.ReadDateTime6();
+            value.AlarmIdentification.SN = reader.ReadByte();
+            value.AlarmIdentification.AttachCount = reader.ReadByte();
+            value.AlarmIdentification.Retain = reader.ReadByte();
+            writer.WriteString($"[{terminalIDHex}]终端ID", value.AlarmIdentification.TerminalID);
             writer.WriteString($"[{value.AlarmIdentification.Time.ToString("yyMMddHHmmss")}]日期时间", value.AlarmIdentification.Time.ToString("yyyy-MM-dd HH:mm:ss"));
             writer.WriteNumber($"[{value.AlarmIdentification.SN.ReadNumber()}]序号", value.AlarmIdentification.SN);
             writer.WriteNumber($"[{value.AlarmIdentification.AttachCount.ReadNumber()}]附件数量", value.AlarmIdentification.AttachCount);

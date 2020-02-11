@@ -1,13 +1,15 @@
 ﻿using JT808.Protocol.Formatters;
+using JT808.Protocol.Interfaces;
 using JT808.Protocol.MessageBody;
 using JT808.Protocol.MessagePack;
+using System.Text.Json;
 
 namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
 {
     /// <summary>
     /// 盲区监测系统参数
     /// </summary>
-    public class JT808_0x8103_0xF367 : JT808_0x8103_BodyBase, IJT808MessagePackFormatter<JT808_0x8103_0xF367>
+    public class JT808_0x8103_0xF367 : JT808_0x8103_BodyBase, IJT808MessagePackFormatter<JT808_0x8103_0xF367>, IJT808Analyze
     {
         public override uint ParamId { get; set; } = JT808_JTActiveSafety_Constants.JT808_0X8103_0xF367;
         public override byte ParamLength { get; set; } = 2;
@@ -20,14 +22,27 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
         /// </summary>
         public byte LateralRearApproachAlarmTimeThreshold { get; set; }
 
+        public void Analyze(ref JT808MessagePackReader reader, Utf8JsonWriter writer, IJT808Config config)
+        {
+            JT808_0x8103_0xF367 value = new JT808_0x8103_0xF367();
+            value.ParamId = reader.ReadUInt32();
+            value.ParamLength = reader.ReadByte();
+            writer.WriteNumber($"[{ value.ParamId.ReadNumber()}]参数ID", value.ParamId);
+            writer.WriteNumber($"[{value.ParamLength.ReadNumber()}]参数长度", value.ParamLength);
+            value.RearApproachAlarmTimeThreshold = reader.ReadByte();
+            writer.WriteNumber($"[{value.RearApproachAlarmTimeThreshold.ReadNumber()}]后方接近报警时间阈值", value.RearApproachAlarmTimeThreshold);
+            value.LateralRearApproachAlarmTimeThreshold = reader.ReadByte();
+            writer.WriteNumber($"[{value.LateralRearApproachAlarmTimeThreshold.ReadNumber()}]侧后方接近报警时间阈值", value.LateralRearApproachAlarmTimeThreshold);
+        }
+
         public JT808_0x8103_0xF367 Deserialize(ref JT808MessagePackReader reader, IJT808Config config)
         {
-            JT808_0x8103_0xF367 jT808_0X8103_0XF367 = new JT808_0x8103_0xF367();
-            jT808_0X8103_0XF367.ParamId = reader.ReadUInt32();
-            jT808_0X8103_0XF367.ParamLength = reader.ReadByte();
-            jT808_0X8103_0XF367.RearApproachAlarmTimeThreshold = reader.ReadByte();
-            jT808_0X8103_0XF367.LateralRearApproachAlarmTimeThreshold = reader.ReadByte();
-            return jT808_0X8103_0XF367;
+            JT808_0x8103_0xF367 value = new JT808_0x8103_0xF367();
+            value.ParamId = reader.ReadUInt32();
+            value.ParamLength = reader.ReadByte();
+            value.RearApproachAlarmTimeThreshold = reader.ReadByte();
+            value.LateralRearApproachAlarmTimeThreshold = reader.ReadByte();
+            return value;
         }
 
         public void Serialize(ref JT808MessagePackWriter writer, JT808_0x8103_0xF367 value, IJT808Config config)

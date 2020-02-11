@@ -54,5 +54,11 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
             Assert.Equal(5000, jT808UploadLocationRequest.AttachmentServerIPTcpPort);
             Assert.Equal(5001, jT808UploadLocationRequest.AttachmentServerIPUdpPort);
         }
+
+        [Fact]
+        public void Json()
+        {
+            var json = JT808Serializer.Analyze<JT808_0x9208>("0B3139322E3136382E312E311388138934343434343434191210183100030201313131313131313131313131313131313131313131313131313131313131313100000000000000000000000000000000".ToHexBytes());
+        }
     }
 }

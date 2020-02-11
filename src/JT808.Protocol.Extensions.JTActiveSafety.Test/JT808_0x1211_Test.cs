@@ -40,5 +40,11 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
             Assert.Equal(2, jT808UploadLocationRequest.FileType);
             Assert.Equal("FileName".Length, jT808UploadLocationRequest.FileNameLength);
         }
+
+        [Fact]
+        public void Json()
+        {
+            var json = JT808Serializer.Analyze<JT808_0x1211>("0846696C654E616D650200000001".ToHexBytes());
+        }
     }
 }

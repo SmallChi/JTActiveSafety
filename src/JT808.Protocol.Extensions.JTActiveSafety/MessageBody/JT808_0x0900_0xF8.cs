@@ -71,7 +71,7 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
                     writer.WriteNumber($"[{item.CustomerCodeLength.ReadNumber()}]客户代码长度", item.CustomerCodeLength);
                     string customerCodeHex = reader.ReadVirtualArray(item.CustomerCodeLength).ToArray().ToHexString();
                     item.CustomerCode = reader.ReadString(item.CustomerCodeLength);
-                    writer.WriteString($"[{customerCodeHex}]设备ID", item.CustomerCode);
+                    writer.WriteString($"[{customerCodeHex}]客户代码", item.CustomerCode);
 
                     writer.WriteEndObject();
                 }

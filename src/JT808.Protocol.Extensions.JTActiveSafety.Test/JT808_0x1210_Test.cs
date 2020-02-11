@@ -43,7 +43,7 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
                         FileSize=10
                     }
                 },
-                TerminalID = "4444444",
+                MakerID = "4444444",
                 InfoType = 0
             };
             var hex = JT808Serializer.Serialize(jT808UploadLocationRequest).ToHexString();
@@ -68,9 +68,14 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
             Assert.Equal(9, jT808UploadLocationRequest.AttachInfos[1].FileNameLength);
             Assert.Equal(10u, jT808UploadLocationRequest.AttachInfos[1].FileSize);
 
-            Assert.Equal("4444444", jT808UploadLocationRequest.TerminalID);
+            Assert.Equal("4444444", jT808UploadLocationRequest.MakerID);
             Assert.Equal(0, jT808UploadLocationRequest.InfoType);
 
+        }
+        [Fact]
+        public void Json()
+        {
+            var json = JT808Serializer.Analyze<JT808_0x1210>("3434343434343434343434343434191210183100030201313131313131313131313131313131313131313131313131313131313131313100020866696C656E616D65000000090966696C656E616D65310000000A".ToHexBytes());
         }
     }
 }

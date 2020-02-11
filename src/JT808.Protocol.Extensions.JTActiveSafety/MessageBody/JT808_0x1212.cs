@@ -1,12 +1,14 @@
 ﻿using JT808.Protocol.Formatters;
+using JT808.Protocol.Interfaces;
 using JT808.Protocol.MessagePack;
+using System.Text.Json;
 
 namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
 {
     /// <summary>
     /// 文件上传完成消息
     /// </summary>
-    public class JT808_0x1212 : JT808Bodies, IJT808MessagePackFormatter<JT808_0x1212>
+    public class JT808_0x1212 : JT808Bodies, IJT808MessagePackFormatter<JT808_0x1212>, IJT808Analyze
     {
         public override string Description => "文件上传完成消息";
         /// <summary>
@@ -28,14 +30,28 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
         public uint FileSize { get; set; }
         public override ushort MsgId => 0x1212;
 
+        public void Analyze(ref JT808MessagePackReader reader, Utf8JsonWriter writer, IJT808Config config)
+        {
+            JT808_0x1212 value = new JT808_0x1212();
+            value.FileNameLength = reader.ReadByte();
+            writer.WriteNumber($"[{value.FileNameLength.ReadNumber()}]文件名称长度", value.FileNameLength);
+            string fileNameHex = reader.ReadVirtualArray(value.FileNameLength).ToArray().ToHexString();
+            value.FileName = reader.ReadString(value.FileNameLength);
+            writer.WriteString($"[{fileNameHex}]文件名称", value.FileName);
+            value.FileType = reader.ReadByte();
+            writer.WriteNumber($"[{value.FileType.ReadNumber()}]文件类型", value.FileType);
+            value.FileSize = reader.ReadUInt32();
+            writer.WriteNumber($"[{value.FileSize.ReadNumber()}]文件大小", value.FileSize);
+        }
+
         public JT808_0x1212 Deserialize(ref JT808MessagePackReader reader, IJT808Config config)
         {
-            JT808_0x1212 jT808_0X1212 = new JT808_0x1212();
-            jT808_0X1212.FileNameLength = reader.ReadByte();
-            jT808_0X1212.FileName = reader.ReadString(jT808_0X1212.FileNameLength);
-            jT808_0X1212.FileType = reader.ReadByte();
-            jT808_0X1212.FileSize = reader.ReadUInt32();
-            return jT808_0X1212;
+            JT808_0x1212 value = new JT808_0x1212();
+            value.FileNameLength = reader.ReadByte();
+            value.FileName = reader.ReadString(value.FileNameLength);
+            value.FileType = reader.ReadByte();
+            value.FileSize = reader.ReadUInt32();
+            return value;
         }
 
         public void Serialize(ref JT808MessagePackWriter writer, JT808_0x1212 value, IJT808Config config)
