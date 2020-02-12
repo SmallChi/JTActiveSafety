@@ -129,5 +129,11 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
             Assert.Equal(45, jT808_0X8103_0XF364.WarningVolume);
             Assert.Equal(JT808_JTActiveSafety_Constants.JT808_0X8103_0xF364, jT808_0X8103_0XF364.ParamId);
         }
+
+        [Fact]
+        public void Json()
+        {
+            var json = JT808Serializer.Analyze<JT808_0x8103>("010000F36438052D030002000122231D26000000040000000A1E09152B08180F0E14291011122A16170D13280C0B1C192C1B1A2425270607202101020304".ToHexBytes());
+        }
     }
 }

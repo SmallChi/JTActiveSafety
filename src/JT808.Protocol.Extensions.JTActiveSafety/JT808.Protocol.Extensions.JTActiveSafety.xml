@@ -4,16 +4,14 @@
         <name>JT808.Protocol.Extensions.JTActiveSafety</name>
     </assembly>
     <members>
-        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.JT808_JTActiveSafety_0x0900_Type.QueryState">
+        <member name="T:JT808.Protocol.Extensions.JTActiveSafety.Enums.ActivePhotographyStrategyType">
             <summary>
-            状态查询
-            外设状态信息：外设工作状态、设备报警信息
+            主动拍照策略
             </summary>
         </member>
-        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.JT808_JTActiveSafety_0x0900_Type.QueryInfomation">
+        <member name="T:JT808.Protocol.Extensions.JTActiveSafety.Enums.PhotoResolutionType">
             <summary>
-            信息查询
-            外设传感器的基本信息：公司信息、产品代码、版本号、外设ID、客户代码。
+            拍照分辨率
             </summary>
         </member>
         <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.USBIDType.ADAS">
@@ -34,6 +32,11 @@
         <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.USBIDType.BSD">
             <summary>
             盲点监测系统
+            </summary>
+        </member>
+        <member name="T:JT808.Protocol.Extensions.JTActiveSafety.Enums.VideoRecordingResolutionType">
+            <summary>
+            视频录制分辨率
             </summary>
         </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.Enums.WorkingConditionType">
@@ -483,6 +486,7 @@
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF364.ActivePhotographyStrategy">
             <summary>
             主动拍照策略
+            <see cref="T:JT808.Protocol.Extensions.JTActiveSafety.Enums.ActivePhotographyStrategyType"/>
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF364.ActivelyTimePhotoInterval">
@@ -508,6 +512,7 @@
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF364.PhotoResolution">
             <summary>
             拍照分辨率
+            <see cref="T:JT808.Protocol.Extensions.JTActiveSafety.Enums.PhotoResolutionType"/>
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF364.VideoRecordingResolution">

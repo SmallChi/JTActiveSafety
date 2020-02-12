@@ -107,5 +107,10 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Test
             Assert.Equal(66, jT808_0X8103_0XF365.VideoRecordingTimeBeforeAndAfterSmokingAlarm);
             Assert.Equal(JT808_JTActiveSafety_Constants.JT808_0X8103_0xF365, jT808_0X8103_0XF365.ParamId);
         }
+        [Fact]
+        public void Json()
+        {
+            var json = JT808Serializer.Analyze<JT808_0x8103>("010000F3652F052D030002000122231D26000000040000000A003E002E0102033941373831402F3033423C3D3234353F3A3B360506".ToHexBytes());
+        }
     }
 }
