@@ -7,14 +7,13 @@ JTActiveSafety协议、道路运输车辆主动安全智能防控系统-主动�
 
 [![MIT Licence](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/SmallChi/JTActiveSafety/blob/master/LICENSE)![.NET Core](https://github.com/SmallChi/JTActiveSafety/workflows/.NET%20Core/badge.svg?branch=master)
 
-## 基于JT808扩展的JTActiveSafety消息协议
-
 ## NuGet安装
 
-| Package Name          | Version                                            | Downloads                                           |
-| --------------------- | -------------------------------------------------- | --------------------------------------------------- |
-| Install-Package JT808 | ![JT808](https://img.shields.io/nuget/v/JT808.svg) | ![JT808](https://img.shields.io/nuget/dt/JT808.svg) |
-| Install-Package JT808.Protocol.Extensions.JTActiveSafety| ![JT808.Protocol.Extensions.JTActiveSafety](https://img.shields.io/nuget/v/JT808.Protocol.Extensions.JTActiveSafety.svg) | ![JT808](https://img.shields.io/nuget/dt/JT808.Protocol.Extensions.JTActiveSafety.svg) |
+| Package Name          | Version                                            | Downloads|                                     Remark      |
+| --------------------- | -------------------------------------------------- | --------------------------------------------------- |--------------------------------------------------- |
+| Install-Package JTActiveSafety| ![JTActiveSafety](https://img.shields.io/nuget/v/JTActiveSafety.svg) | ![JT808](https://img.shields.io/nuget/dt/JTActiveSafety.svg) |主动安全的附件协议|
+| Install-Package JT808 | ![JT808](https://img.shields.io/nuget/v/JT808.svg) | ![JT808](https://img.shields.io/nuget/dt/JT808.svg) |基础JT808协议|
+| Install-Package JT808.Protocol.Extensions.JTActiveSafety| ![JT808.Protocol.Extensions.JTActiveSafety](https://img.shields.io/nuget/v/JT808.Protocol.Extensions.JTActiveSafety.svg) | ![JT808](https://img.shields.io/nuget/dt/JT808.Protocol.Extensions.JTActiveSafety.svg) |基于JT808扩展的JTActiveSafety消息协议|
 
 ### JT808扩展协议消息对照表
 
