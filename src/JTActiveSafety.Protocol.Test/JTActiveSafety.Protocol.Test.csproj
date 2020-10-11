@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\JTActiveSafety.Protocol\JTActiveSafety.Protocol.csproj" />
+  </ItemGroup>
+
 </Project>

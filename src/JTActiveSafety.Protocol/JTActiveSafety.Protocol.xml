@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JTActiveSafety.Protocol</name>
+    </assembly>
+    <members>
+        <member name="T:JTActiveSafety.Protocol.Buffers.JTActiveSafetyBufferWriter">
+            <summary>
+            <see cref="!:System.Buffers.Writer"/>
+            </summary>
+        </member>
+        <member name="T:JTActiveSafety.Protocol.Extensions.HexExtensions">
+            <summary>
+            
+            ref:"www.codeproject.com/tips/447938/high-performance-csharp-byte-array-to-hex-string-t"
+            </summary>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ToHexBytes(System.String)">
+            <summary>
+            16进制字符串转16进制数组
+            </summary>
+            <param name="hexString"></param>
+            <param name="separator"></param>
+            <returns></returns>
+        </member>
+        <member name="F:JTActiveSafety.Protocol.JTActiveSafetyPackage.FH_Bytes">
+            <summary>
+            帧头标识
+            </summary>
+        </member>
+        <member name="F:JTActiveSafety.Protocol.JTActiveSafetyPackage.FH">
+            <summary>
+            帧头标识
+            </summary>
+        </member>
+        <member name="P:JTActiveSafety.Protocol.JTActiveSafetyPackage.FH_Flag">
+            <summary>
+            帧头标识
+            固定为0x30 0x31 0x63 0x64
+            </summary>
+        </member>
+        <member name="P:JTActiveSafety.Protocol.JTActiveSafetyPackage.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:JTActiveSafety.Protocol.JTActiveSafetyPackage.Offset">
+            <summary>
+            数据偏移量
+            </summary>
+        </member>
+        <member name="P:JTActiveSafety.Protocol.JTActiveSafetyPackage.Length">
+            <summary>
+            数据长度
+            </summary>
+        </member>
+        <member name="P:JTActiveSafety.Protocol.JTActiveSafetyPackage.Bodies">
+            <summary>
+            数据体
+            默认长度64K，文件小于64K 则为实际长度
+            </summary>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.MessagePack.JTActiveSafetyMessagePackReader.ReadBigNumber(System.Int32)">
+            <summary>
+            数字编码 大端模式、高位在前
+            </summary>
+            <param name="len"></param>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.MessagePack.JTActiveSafetyMessagePackWriter.WriteBigNumber(System.String,System.Int32)">
+            <summary>
+            数字编码 大端模式、高位在前
+            </summary>
+            <param name="value"></param>
+            <param name="len"></param>
+        </member>
+    </members>
+</doc>

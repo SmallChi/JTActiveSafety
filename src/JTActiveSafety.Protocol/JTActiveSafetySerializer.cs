@@ -19,7 +19,7 @@ namespace JTActiveSafety.Protocol
             {
                 JTActiveSafetyMessagePackWriter writer = new JTActiveSafetyMessagePackWriter(buffer);
                 writer.WriteUInt32(package.FH_Flag);
-                writer.WriteString(package.FileName);
+                writer.WriteString(package.FileName.PadLeft(50, '\0'));
                 writer.WriteUInt32(package.Offset);
                 writer.WriteUInt32((uint)package.Bodies.Length);
                 writer.WriteArray(package.Bodies);
@@ -51,13 +51,13 @@ namespace JTActiveSafety.Protocol
             {
                 writer.WriteStartObject();
                 var header = reader.ReadUInt32();
-                writer.WriteString($"[{header}]头部", header.ReadNumber());
+                writer.WriteNumber($"[{ header.ReadNumber()}]头部", header);
                 var FileName = reader.ReadString(50);
                 writer.WriteString($"[文件名称]", FileName);
                 var offset = reader.ReadUInt32();
-                writer.WriteNumber($"{offset}[数据偏移量]", offset);
+                writer.WriteNumber($"{offset.ReadNumber()}[数据偏移量]", offset);
                 var length = reader.ReadUInt32();
-                writer.WriteNumber($"{length}[数据长度]", length);
+                writer.WriteNumber($"{length.ReadNumber()}[数据长度]", length);
                 var bodies = reader.ReadRemainArray().ToArray();
                 writer.WriteString("[数据体]", string.Join(" ", (bodies).Select(p => p.ToString("X2"))));
                 writer.WriteEndObject();
