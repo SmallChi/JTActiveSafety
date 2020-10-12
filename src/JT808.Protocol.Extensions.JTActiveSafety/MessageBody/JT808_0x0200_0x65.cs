@@ -16,7 +16,7 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
     public class JT808_0x0200_0x65 : JT808_0x0200_BodyBase, IJT808MessagePackFormatter<JT808_0x0200_0x65>, IJT808Analyze
     {
         public override byte AttachInfoId { get; set; } = JT808_JTActiveSafety_Constants.JT808_0X0200_0x65;
-        public override byte AttachInfoLength { get; set; } = 32;
+        public override byte AttachInfoLength { get; set; } = 47;
         /// <summary>
         /// 报警ID
         /// </summary>
@@ -101,26 +101,22 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
             switch (value.AlarmOrEventType)
             {
                 case 0x01:
-                    alarmOrEventTypeString = "前向碰撞报警";
+                    alarmOrEventTypeString = "疲劳驾驶报警";
                     break;
                 case 0x02:
-                    alarmOrEventTypeString = "车道偏离报警";
+                    alarmOrEventTypeString = "接打电话报警";
                     break;
                 case 0x03:
-                    alarmOrEventTypeString = "车距过近报警";
+                    alarmOrEventTypeString = "抽烟报警";
                     break;
                 case 0x04:
-                    alarmOrEventTypeString = "行人碰撞报警";
+                    alarmOrEventTypeString = "分神驾驶报警";
                     break;
                 case 0x05:
-                    alarmOrEventTypeString = "频繁变道报警";
+                    alarmOrEventTypeString = "驾驶员异常报警";
                     break;
                 case 0x06:
-                    alarmOrEventTypeString = "道路标识超限报警";
-                    break;
                 case 0x07:
-                    alarmOrEventTypeString = "障碍物报警";
-                    break;
                 case 0x08:
                 case 0x09:
                 case 0x0A:
@@ -132,10 +128,10 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
                     alarmOrEventTypeString = "用户自定义";
                     break;
                 case 0x10:
-                    alarmOrEventTypeString = "道路标志识别事件";
+                    alarmOrEventTypeString = "自动抓拍事件";
                     break;
                 case 0x11:
-                    alarmOrEventTypeString = "主动抓拍事件";
+                    alarmOrEventTypeString = "驾驶员变更事件";
                     break;
                 case 0x12:
                 case 0x13:
