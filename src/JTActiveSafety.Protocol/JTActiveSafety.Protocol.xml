@@ -15,7 +15,7 @@
             ref:"www.codeproject.com/tips/447938/high-performance-csharp-byte-array-to-hex-string-t"
             </summary>
         </member>
-        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ToHexBytes(System.String)">
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ToHexBytes(System.String,System.String)">
             <summary>
             16进制字符串转16进制数组
             </summary>

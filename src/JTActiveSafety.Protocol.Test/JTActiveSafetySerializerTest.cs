@@ -15,13 +15,13 @@ namespace JTActiveSafety.Protocol.Test
             package.Offset = 1;
             package.Bodies = new byte[5] { 1, 2, 3, 4, 5 };
             var hex = JTActiveSafetySerializer.Serialize(package).ToHexString();
-            Assert.Equal("3031636400000000000000000000000000000000000000000000000000000000000000000000000000000000616C61726D2E786C737800000001000000050102030405", hex);
+            Assert.Equal("30 31 63 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 61 6C 61 72 6D 2E 78 6C 73 78 00 00 00 01 00 00 00 05 01 02 03 04 05", hex);
         }
 
         [Fact]
         public void DeserializeTest1()
         {
-            var data = "3031636400000000000000000000000000000000000000000000000000000000000000000000000000000000616C61726D2E786C737800000001000000050102030405".ToHexBytes();
+            var data = "30 31 63 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 61 6C 61 72 6D 2E 78 6C 73 78 00 00 00 01 00 00 00 05 01 02 03 04 05".ToHexBytes();
             var package = JTActiveSafetySerializer.Deserialize(data);
             Assert.Equal(JTActiveSafetyPackage.FH, package.FH_Flag);
             Assert.Equal("alarm.xlsx", package.FileName.TrimStart('\0'));
@@ -33,7 +33,7 @@ namespace JTActiveSafety.Protocol.Test
         [Fact]
         public void AnalyzeTest1()
         {
-            var data = "3031636400000000000000000000000000000000000000000000000000000000000000000000000000000000616C61726D2E786C737800000001000000050102030405".ToHexBytes();
+            var data = "30 31 63 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 61 6C 61 72 6D 2E 78 6C 73 78 00 00 00 01 00 00 00 05 01 02 03 04 05".ToHexBytes();
             var json = JTActiveSafetySerializer.Analyze(data);
         }
     }
