@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1;</TargetFrameworks>
-    <LangVersion>8.0</LangVersion>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net5;</TargetFrameworks>
+    <LangVersion>9.0</LangVersion>
     <Copyright>Copyright 2019.</Copyright>
     <Authors>SmallChi(Koike)</Authors>
     <PackageId>JT808.Protocol.Extensions.JTActiveSafety</PackageId>
@@ -15,16 +15,9 @@
     <licenseUrl>https://github.com/SmallChi/JTActiveSafety/blob/master/LICENSE</licenseUrl>
     <license>https://github.com/SmallChi/JTActiveSafety/blob/master/LICENSE</license>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.0.6</Version>
+    <DocumentationFile>JT808.Protocol.Extensions.JTActiveSafety.xml</DocumentationFile>
+    <Version>1.1.0</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
-    <DocumentationFile>JT808.Protocol.Extensions.JTActiveSafety.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
-    <DocumentationFile>JT808.Protocol.Extensions.JTActiveSafety.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -35,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="JT808" Version="2.2.12" />
+    <PackageReference Include="JT808" Version="2.3.0" />
   </ItemGroup>
 
 
