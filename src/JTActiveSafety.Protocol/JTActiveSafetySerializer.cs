@@ -10,8 +10,17 @@ using System.Text.Json;
 
 namespace JTActiveSafety.Protocol
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class JTActiveSafetySerializer
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="package"></param>
+        /// <param name="minBufferSize"></param>
+        /// <returns></returns>
         public static byte[] Serialize(JTActiveSafetyPackage package, int minBufferSize = 65 * 1024)
         {
             byte[] buffer = JTActiveSafetyArrayPool.Rent(minBufferSize);
@@ -30,7 +39,11 @@ namespace JTActiveSafety.Protocol
                 JTActiveSafetyArrayPool.Return(buffer);
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="bytes"></param>
+        /// <returns></returns>
         public static JTActiveSafetyPackage Deserialize(ReadOnlySpan<byte> bytes)
         {
             JTActiveSafetyPackage jTActiveSafetyPackage= new JTActiveSafetyPackage();
@@ -42,7 +55,12 @@ namespace JTActiveSafety.Protocol
             jTActiveSafetyPackage.Bodies = reader.ReadRemainArray().ToArray();
             return jTActiveSafetyPackage;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="bytes"></param>
+        /// <param name="options"></param>
+        /// <returns></returns>
         public static byte[] AnalyzeJsonBuffer(ReadOnlySpan<byte> bytes, JsonWriterOptions options = default)
         {
             JTActiveSafetyMessagePackReader reader = new JTActiveSafetyMessagePackReader(bytes);
@@ -65,6 +83,12 @@ namespace JTActiveSafety.Protocol
                 return memoryStream.ToArray();
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="bytes"></param>
+        /// <param name="options"></param>
+        /// <returns></returns>
         public static string Analyze(ReadOnlySpan<byte> bytes, JsonWriterOptions options = default)
         {
             string json = Encoding.UTF8.GetString(AnalyzeJsonBuffer(bytes, options));

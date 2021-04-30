@@ -4,6 +4,9 @@ using System.Text;
 
 namespace JT808.Protocol.Extensions.JTActiveSafety.Metadata
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class JT808_0x0900_0xF8_USB
     {
         /// <summary>

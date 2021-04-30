@@ -12,10 +12,25 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
     /// </summary>
     public class JT808_0x9208: JT808Bodies, IJT808MessagePackFormatter<JT808_0x9208>, IJT808Analyze
     {
+        /// <summary>
+        /// Description
+        /// </summary>
         public override string Description => "报警附件上传指令";
+        /// <summary>
+        /// 服务IP地址长度
+        /// </summary>
         public byte AttachmentServerIPLength { get; set; }
+        /// <summary>
+        /// 服务IP地址
+        /// </summary>
         public string AttachmentServerIP { get; set; }
+        /// <summary>
+        /// TCP端口
+        /// </summary>
         public ushort AttachmentServerIPTcpPort { get; set; }
+        /// <summary>
+        /// UDP端口
+        /// </summary>
         public ushort AttachmentServerIPUdpPort { get; set; }
         /// <summary>
         /// 报警标识号
@@ -30,9 +45,16 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
         /// 预留
         /// </summary>
         public byte[] Retain { get; set; } = new byte[16];
-
+        /// <summary>
+        /// 报警附件上传指令Id
+        /// </summary>
         public override ushort MsgId => 0x9208;
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <param name="writer"></param>
+        /// <param name="config"></param>
         public void Analyze(ref JT808MessagePackReader reader, Utf8JsonWriter writer, IJT808Config config)
         {
             JT808_0x9208 value = new JT808_0x9208();
@@ -63,7 +85,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
             string retainHex = reader.ReadVirtualArray(16).ToArray().ToHexString();
             writer.WriteString($"预留", retainHex);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <param name="config"></param>
+        /// <returns></returns>
         public JT808_0x9208 Deserialize(ref JT808MessagePackReader reader, IJT808Config config)
         {
             JT808_0x9208 value = new JT808_0x9208();
@@ -83,7 +110,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
             value.Retain = reader.ReadArray(16).ToArray();
             return value;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="writer"></param>
+        /// <param name="value"></param>
+        /// <param name="config"></param>
         public void Serialize(ref JT808MessagePackWriter writer, JT808_0x9208 value, IJT808Config config)
         {
             writer.Skip(1, out int AttachmentServerIPLengthPosition);

@@ -6,8 +6,36 @@
     <members>
         <member name="T:JTActiveSafety.Protocol.Buffers.JTActiveSafetyBufferWriter">
             <summary>
-            <see cref="!:System.Buffers.Writer"/>
+            内存写入器
+            ref:System.Buffers.Writer
             </summary>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Buffers.JTActiveSafetyBufferWriter.#ctor(System.Span{System.Byte})">
+            <summary>
+            
+            </summary>
+            <param name="buffer"></param>
+        </member>
+        <member name="P:JTActiveSafety.Protocol.Buffers.JTActiveSafetyBufferWriter.Free">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:JTActiveSafety.Protocol.Buffers.JTActiveSafetyBufferWriter.Written">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:JTActiveSafety.Protocol.Buffers.JTActiveSafetyBufferWriter.WrittenCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Buffers.JTActiveSafetyBufferWriter.Advance(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="count"></param>
         </member>
         <member name="T:JTActiveSafety.Protocol.Extensions.HexExtensions">
             <summary>
@@ -15,12 +43,111 @@
             ref:"www.codeproject.com/tips/447938/high-performance-csharp-byte-array-to-hex-string-t"
             </summary>
         </member>
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ToHexString(System.Byte[],System.String)">
+            <summary>
+            
+            </summary>
+            <param name="source"></param>
+            <param name="separator"></param>
+            <returns></returns>
+        </member>
         <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ToHexBytes(System.String,System.String)">
             <summary>
             16进制字符串转16进制数组
             </summary>
             <param name="hexString"></param>
             <param name="separator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ReadNumber(System.Byte,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ReadNumber(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ReadNumber(System.UInt32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ReadNumber(System.Int64,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ReadNumber(System.UInt64,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ReadNumber(System.Int16,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ReadNumber(System.UInt16,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ReadBinary(System.UInt16)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ReadBinary(System.Int16)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ReadBinary(System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ReadBinary(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.Extensions.HexExtensions.ReadBinary(System.Byte)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
             <returns></returns>
         </member>
         <member name="F:JTActiveSafety.Protocol.JTActiveSafetyPackage.FH_Bytes">
@@ -58,6 +185,47 @@
             <summary>
             数据体
             默认长度64K，文件小于64K 则为实际长度
+            </summary>
+        </member>
+        <member name="T:JTActiveSafety.Protocol.JTActiveSafetySerializer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.JTActiveSafetySerializer.Serialize(JTActiveSafety.Protocol.JTActiveSafetyPackage,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="package"></param>
+            <param name="minBufferSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.JTActiveSafetySerializer.Deserialize(System.ReadOnlySpan{System.Byte})">
+            <summary>
+            
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.JTActiveSafetySerializer.AnalyzeJsonBuffer(System.ReadOnlySpan{System.Byte},System.Text.Json.JsonWriterOptions)">
+            <summary>
+            
+            </summary>
+            <param name="bytes"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JTActiveSafety.Protocol.JTActiveSafetySerializer.Analyze(System.ReadOnlySpan{System.Byte},System.Text.Json.JsonWriterOptions)">
+            <summary>
+            
+            </summary>
+            <param name="bytes"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JTActiveSafety.Protocol.MessagePack.JTActiveSafetyMessagePackReader">
+            <summary>
+            
             </summary>
         </member>
         <member name="M:JTActiveSafety.Protocol.MessagePack.JTActiveSafetyMessagePackReader.ReadBigNumber(System.Int32)">

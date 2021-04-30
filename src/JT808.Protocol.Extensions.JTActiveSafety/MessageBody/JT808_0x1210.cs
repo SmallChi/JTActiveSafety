@@ -42,11 +42,20 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
         /// 附件信息列表
         /// </summary>
         public List<AttachProperty> AttachInfos { get; set; }
-
+        /// <summary>
+        /// 报警附件信息消息Id
+        /// </summary>
         public override ushort MsgId => 0x1210;
-
+        /// <summary>
+        /// 报警附件信息消息
+        /// </summary>
         public override string Description => "报警附件信息消息";
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <param name="writer"></param>
+        /// <param name="config"></param>
         public void Analyze(ref JT808MessagePackReader reader, Utf8JsonWriter writer, IJT808Config config)
         {
             JT808_0x1210 value = new JT808_0x1210();
@@ -91,7 +100,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
                 writer.WriteEndArray();
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <param name="config"></param>
+        /// <returns></returns>
         public JT808_0x1210 Deserialize(ref JT808MessagePackReader reader, IJT808Config config)
         {
             JT808_0x1210 value = new JT808_0x1210();
@@ -121,10 +135,15 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
             }
             return value;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="writer"></param>
+        /// <param name="value"></param>
+        /// <param name="config"></param>
         public void Serialize(ref JT808MessagePackWriter writer, JT808_0x1210 value, IJT808Config config)
         {
-            writer.WriteString(value.MakerID.PadRight(7, '0'));
+            writer.WriteString(value.MakerID.PadRight(7, '\0'));
             if (value.AlarmIdentification == null)
             {
                 throw new NullReferenceException($"{nameof(AlarmIdentificationProperty)}不为空");

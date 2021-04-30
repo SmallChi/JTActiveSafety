@@ -10,15 +10,29 @@ using System.Text.Json;
 
 namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
 {
+    /// <summary>
+    /// 透传数据
+    /// </summary>
     public class JT808_0x0900_0xF8 : JT808_0x0900_BodyBase, IJT808MessagePackFormatter<JT808_0x0900_0xF8>, IJT808Analyze
     {
+        /// <summary>
+        /// 透传类型
+        /// </summary>
         public override byte PassthroughType { get; set; } = JT808_JTActiveSafety_Constants.JT808_0X0900_0xF8;
         /// <summary>
         /// 消息列表总数
         /// </summary>
         public byte USBMessageCount { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public List<JT808_0x0900_0xF8_USB> USBMessages { get; set; }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <param name="writer"></param>
+        /// <param name="config"></param>
         public void Analyze(ref JT808MessagePackReader reader, Utf8JsonWriter writer, IJT808Config config)
         {
             JT808_0x0900_0xF8 value = new JT808_0x0900_0xF8();
@@ -78,7 +92,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
                 writer.WriteEndArray();
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <param name="config"></param>
+        /// <returns></returns>
         public JT808_0x0900_0xF8 Deserialize(ref JT808MessagePackReader reader, IJT808Config config)
         {
             JT808_0x0900_0xF8 value = new JT808_0x0900_0xF8();
@@ -108,7 +127,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
             }
             return value;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="writer"></param>
+        /// <param name="value"></param>
+        /// <param name="config"></param>
         public void Serialize(ref JT808MessagePackWriter writer, JT808_0x0900_0xF8 value, IJT808Config config)
         {
             if (value.USBMessages != null && value.USBMessages.Count > 0)

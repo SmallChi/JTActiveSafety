@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="JT808" Version="2.3.7" />
+    <PackageReference Include="JT808" Version="2.3.9" />
   </ItemGroup>
 
 

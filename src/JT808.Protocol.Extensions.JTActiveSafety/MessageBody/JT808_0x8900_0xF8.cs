@@ -12,6 +12,9 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
     /// </summary>
     public class JT808_0x8900_0xF8 : JT808_0x8900_BodyBase, IJT808MessagePackFormatter<JT808_0x8900_0xF8>, IJT808Analyze
     {
+        /// <summary>
+        /// 查询基本信息透传类型
+        /// </summary>
         public override byte PassthroughType { get; set; } = JT808_JTActiveSafety_Constants.JT808_0X0900_0xF8;
         /// <summary>
         /// 外设ID列表总数
@@ -21,7 +24,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
         /// 外设ID
         /// </summary>
         public List<byte> MultipleUSB { get; set; }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <param name="writer"></param>
+        /// <param name="config"></param>
         public void Analyze(ref JT808MessagePackReader reader, Utf8JsonWriter writer, IJT808Config config)
         {
             JT808_0x8900_0xF8 value = new JT808_0x8900_0xF8();
@@ -40,7 +48,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
                 writer.WriteEndArray();
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <param name="config"></param>
+        /// <returns></returns>
         public JT808_0x8900_0xF8 Deserialize(ref JT808MessagePackReader reader, IJT808Config config)
         {
             JT808_0x8900_0xF8 value = new JT808_0x8900_0xF8();
@@ -55,7 +68,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
             }
             return value;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="writer"></param>
+        /// <param name="value"></param>
+        /// <param name="config"></param>
         public void Serialize(ref JT808MessagePackWriter writer, JT808_0x8900_0xF8 value, IJT808Config config)
         {
             if (value.MultipleUSB != null && value.MultipleUSB.Count > 0)

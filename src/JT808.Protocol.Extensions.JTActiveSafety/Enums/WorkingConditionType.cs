@@ -9,10 +9,25 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Enums
     /// </summary>
     public enum WorkingConditionType:byte
     {
-        正常工作=0x01,
-        待机状态=0x02,
-        升级维护=0x03,
+        /// <summary>
+        /// 正常工作
+        /// </summary>
+        正常工作 = 0x01,
+        /// <summary>
+        /// 待机状态
+        /// </summary>
+        待机状态 = 0x02,
+        /// <summary>
+        /// 升级维护
+        /// </summary>
+        升级维护 = 0x03,
+        /// <summary>
+        /// 设备异常
+        /// </summary>
         设备异常 = 0x04,
+        /// <summary>
+        /// 断开连接
+        /// </summary>
         断开连接 = 0x10,
     }
 }

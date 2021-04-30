@@ -9,9 +9,104 @@
             主动拍照策略
             </summary>
         </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.ActivePhotographyStrategyType.不开启">
+            <summary>
+            不开启
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.ActivePhotographyStrategyType.定时拍照">
+            <summary>
+            定时拍照
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.ActivePhotographyStrategyType.定距拍照">
+            <summary>
+            定距拍照
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.ActivePhotographyStrategyType.保留">
+            <summary>
+            保留
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.ActivePhotographyStrategyType.不修改参数">
+            <summary>
+            不修改参数
+            </summary>
+        </member>
+        <member name="T:JT808.Protocol.Extensions.JTActiveSafety.Enums.JT808_JTActiveSafety_MsgId">
+            <summary>
+            主动安全消息Id
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.JT808_JTActiveSafety_MsgId.报警附件信息消息">
+            <summary>
+            报警附件信息消息
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.JT808_JTActiveSafety_MsgId.文件信息上传">
+            <summary>
+            文件信息上传
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.JT808_JTActiveSafety_MsgId.文件上传完成消息">
+            <summary>
+            文件上传完成消息
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.JT808_JTActiveSafety_MsgId.报警附件上传指令">
+            <summary>
+            报警附件上传指令
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.JT808_JTActiveSafety_MsgId.文件上传完成消息应答">
+            <summary>
+            文件上传完成消息应答
+            </summary>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.Enums.PhotoResolutionType">
             <summary>
             拍照分辨率
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.PhotoResolutionType.x352_288">
+            <summary>
+            352x288
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.PhotoResolutionType.x704_288">
+            <summary>
+            704x288
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.PhotoResolutionType.x704_576">
+            <summary>
+            704x576
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.PhotoResolutionType.x640_480">
+            <summary>
+            640x480
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.PhotoResolutionType.x1280_720">
+            <summary>
+            1280x720
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.PhotoResolutionType.x1920_1080">
+            <summary>
+            1920x1080
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.PhotoResolutionType.不修改参数">
+            <summary>
+            不修改参数
+            </summary>
+        </member>
+        <member name="T:JT808.Protocol.Extensions.JTActiveSafety.Enums.USBIDType">
+            <summary>
+            USB编号类型
             </summary>
         </member>
         <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.USBIDType.ADAS">
@@ -39,9 +134,79 @@
             视频录制分辨率
             </summary>
         </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.VideoRecordingResolutionType.CIF">
+            <summary>
+            CIF
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.VideoRecordingResolutionType.HD1">
+            <summary>
+            HD1
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.VideoRecordingResolutionType.D1">
+            <summary>
+            D1
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.VideoRecordingResolutionType.WD1">
+            <summary>
+            WD1
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.VideoRecordingResolutionType.VGA">
+            <summary>
+            VGA
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.VideoRecordingResolutionType._720P">
+            <summary>
+            720P
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.VideoRecordingResolutionType._1080P">
+            <summary>
+            1080P
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.VideoRecordingResolutionType.不修改参数">
+            <summary>
+            不修改参数
+            </summary>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.Enums.WorkingConditionType">
             <summary>
             工作状态
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.WorkingConditionType.正常工作">
+            <summary>
+            正常工作
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.WorkingConditionType.待机状态">
+            <summary>
+            待机状态
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.WorkingConditionType.升级维护">
+            <summary>
+            升级维护
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.WorkingConditionType.设备异常">
+            <summary>
+            设备异常
+            </summary>
+        </member>
+        <member name="F:JT808.Protocol.Extensions.JTActiveSafety.Enums.WorkingConditionType.断开连接">
+            <summary>
+            断开连接
+            </summary>
+        </member>
+        <member name="T:JT808.Protocol.Extensions.JTActiveSafety.JT808_JTActiveSafety_Constants">
+            <summary>
+            主动安全常量
             </summary>
         </member>
         <member name="F:JT808.Protocol.Extensions.JTActiveSafety.JT808_JTActiveSafety_Constants.JT808_0X0200_0x64">
@@ -94,9 +259,31 @@
             信息查询
             </summary>
         </member>
+        <member name="T:JT808.Protocol.Extensions.JTActiveSafety.JTActiveSafetyDependencyInjectionExtensions">
+            <summary>
+            主动安全扩展
+            </summary>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.JTActiveSafetyDependencyInjectionExtensions.AddJTActiveSafetyConfigure(JT808.Protocol.IJT808Builder)">
+            <summary>
+            添加主动安全
+            </summary>
+            <param name="jT808Builder"></param>
+            <returns></returns>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x64">
             <summary>
             高级驾驶辅助系统报警信息
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x64.AttachInfoId">
+            <summary>
+            高级驾驶辅助系统报警信息Id
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x64.AttachInfoLength">
+            <summary>
+            高级驾驶辅助系统报警信息附加长度
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x64.AlarmId">
@@ -181,9 +368,43 @@
             报警标识号
             </summary>
         </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x64.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x64.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x64.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x64,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x65">
             <summary>
             驾驶员状态监测系统报警信息
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x65.AttachInfoId">
+            <summary>
+            驾驶员状态监测系统报警信息Id
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x65.AttachInfoLength">
+            <summary>
+            驾驶员状态监测系统报警信息长度
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x65.AlarmId">
@@ -253,9 +474,43 @@
             报警标识号
             </summary>
         </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x65.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x65.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x65.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x65,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x66">
             <summary>
             胎压监测系统报警信息
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x66.AttachInfoId">
+            <summary>
+            胎压监测系统报警信息Id
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x66.AttachInfoLength">
+            <summary>
+            胎压监测系统报警信息长度
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x66.AlarmId">
@@ -315,9 +570,43 @@
             报警/事件信息列表
             </summary>
         </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x66.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x66.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x66.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x66,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x67">
             <summary>
             盲区监测系统报警信息
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x67.AttachInfoId">
+            <summary>
+            盲区监测系统报警信息Id
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x67.AttachInfoLength">
+            <summary>
+            盲区监测系统报警信息长度
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x67.AlarmId">
@@ -377,15 +666,117 @@
             报警标识号
             </summary>
         </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x67.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x67.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x67.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0200_0x67,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
+        <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF7">
+            <summary>
+            透传数据
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF7.PassthroughType">
+            <summary>
+            透传类型
+            </summary>
+        </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF7.USBMessageCount">
             <summary>
             消息列表总数
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF7.USBMessages">
+            <summary>
+            消息列表数据
+            </summary>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF7.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF7.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF7.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF7,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
+        <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF8">
+            <summary>
+            透传数据
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF8.PassthroughType">
+            <summary>
+            透传类型
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF8.USBMessageCount">
             <summary>
             消息列表总数
             </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF8.USBMessages">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF8.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF8.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF8.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x0900_0xF8,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
         </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1210">
             <summary>
@@ -426,7 +817,46 @@
             附件信息列表
             </summary>
         </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1210.MsgId">
+            <summary>
+            报警附件信息消息Id
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1210.Description">
+            <summary>
+            报警附件信息消息
+            </summary>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1210.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1210.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1210.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1210,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1211">
+            <summary>
+            文件信息上传
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1211.Description">
             <summary>
             文件信息上传
             </summary>
@@ -436,7 +866,12 @@
             文件名称长度
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1211.FileName" -->
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1211.FileName">
+            <summary>
+            文件名称
+            形如：文件类型_通道号_报警类型_序号_报警编号.后缀名
+            </summary>
+        </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1211.FileType">
             <summary>
             文件类型
@@ -447,7 +882,41 @@
             文件大小
             </summary>
         </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1211.MsgId">
+            <summary>
+            文件信息上传Id
+            </summary>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1211.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1211.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1211.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1211,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1212">
+            <summary>
+            文件上传完成消息
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1212.Description">
             <summary>
             文件上传完成消息
             </summary>
@@ -457,7 +926,12 @@
             文件名称长度
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1212.FileName" -->
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1212.FileName">
+            <summary>
+            文件名称
+            形如：文件类型_通道号_报警类型_序号_报警编号.后缀名
+            </summary>
+        </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1212.FileType">
             <summary>
             文件类型
@@ -468,9 +942,48 @@
             文件大小
             </summary>
         </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1212.MsgId">
+            <summary>
+            文件上传完成消息
+            </summary>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1212.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1212.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1212.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x1212,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF364">
             <summary>
             高级驾驶辅助系统参数
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF364.ParamId">
+            <summary>
+            高级驾驶辅助系统参数
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF364.ParamLength">
+            <summary>
+            高级驾驶辅助系统参数长度
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF364.AlarmJudgeSpeedThreshold">
@@ -700,9 +1213,43 @@
             保留字段
             </summary>
         </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF364.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF364.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF364.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF364,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF365">
             <summary>
             驾驶员状态监测系统参数
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF365.ParamId">
+            <summary>
+            驾驶员状态监测系统参数
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF365.ParamLength">
+            <summary>
+            驾驶员状态监测系统参数长度
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF365.AlarmJudgeSpeedThreshold">
@@ -875,9 +1422,43 @@
             保留字段
             </summary>
         </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF365.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF365.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF365.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF365,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF366">
             <summary>
             胎压监测系统参数
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF366.ParamId">
+            <summary>
+            胎压监测系统参数Id
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF366.ParamLength">
+            <summary>
+            胎压监测系统参数长度
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF366.TyreSpecificationType">
@@ -935,9 +1516,43 @@
             保留项
             </summary>
         </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF366.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF366.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF366.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF366,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF367">
             <summary>
             盲区监测系统参数
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF367.ParamId">
+            <summary>
+            盲区监测系统参数Id
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF367.ParamLength">
+            <summary>
+            盲区监测系统参数长度
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF367.RearApproachAlarmTimeThreshold">
@@ -950,9 +1565,38 @@
             侧后方接近报警时间阈值
             </summary>
         </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF367.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF367.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF367.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8103_0xF367,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8900_0xF7">
             <summary>
             查询基本信息
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8900_0xF7.PassthroughType">
+            <summary>
+            查询基本信息类型
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8900_0xF7.USBCount">
@@ -965,9 +1609,38 @@
             外设ID
             </summary>
         </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8900_0xF7.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8900_0xF7.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8900_0xF7.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8900_0xF7,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8900_0xF8">
             <summary>
             查询基本信息
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8900_0xF8.PassthroughType">
+            <summary>
+            查询基本信息透传类型
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8900_0xF8.USBCount">
@@ -980,9 +1653,58 @@
             外设ID
             </summary>
         </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8900_0xF8.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8900_0xF8.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8900_0xF8.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x8900_0xF8,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9208">
             <summary>
             报警附件上传指令
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9208.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9208.AttachmentServerIPLength">
+            <summary>
+            服务IP地址长度
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9208.AttachmentServerIP">
+            <summary>
+            服务IP地址
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9208.AttachmentServerIPTcpPort">
+            <summary>
+            TCP端口
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9208.AttachmentServerIPUdpPort">
+            <summary>
+            UDP端口
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9208.AlarmIdentification">
@@ -1001,7 +1723,41 @@
             预留
             </summary>
         </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9208.MsgId">
+            <summary>
+            报警附件上传指令Id
+            </summary>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9208.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9208.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9208.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9208,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
+        </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9212">
+            <summary>
+            文件上传完成消息应答
+            </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9212.Description">
             <summary>
             文件上传完成消息应答
             </summary>
@@ -1036,6 +1792,35 @@
             <summary>
             补传数据包列表
             </summary>
+        </member>
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9212.MsgId">
+            <summary>
+            文件上传完成消息应答Id
+            </summary>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9212.Analyze(JT808.Protocol.MessagePack.JT808MessagePackReader@,System.Text.Json.Utf8JsonWriter,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="writer"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9212.Deserialize(JT808.Protocol.MessagePack.JT808MessagePackReader@,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9212.Serialize(JT808.Protocol.MessagePack.JT808MessagePackWriter@,JT808.Protocol.Extensions.JTActiveSafety.MessageBody.JT808_0x9212,JT808.Protocol.IJT808Config)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="config"></param>
         </member>
         <member name="T:JT808.Protocol.Extensions.JTActiveSafety.Metadata.AlarmIdentificationProperty">
             <summary>
@@ -1108,7 +1893,12 @@
             文件名称长度
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:JT808.Protocol.Extensions.JTActiveSafety.Metadata.AttachProperty.FileName" -->
+        <member name="P:JT808.Protocol.Extensions.JTActiveSafety.Metadata.AttachProperty.FileName">
+            <summary>
+            文件名称
+            形如：文件类型_通道号_报警类型_序号_报警编号.后缀名
+            </summary>
+        </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.Metadata.AttachProperty.FileSize">
             <summary>
             文件大小
@@ -1127,6 +1917,11 @@
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.Metadata.DataPackageProperty.Length">
             <summary>
             数据长度
+            </summary>
+        </member>
+        <member name="T:JT808.Protocol.Extensions.JTActiveSafety.Metadata.JT808_0x0900_0xF7_USB">
+            <summary>
+            
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.Metadata.JT808_0x0900_0xF7_USB.USBID">
@@ -1149,6 +1944,11 @@
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.Metadata.JT808_0x0900_0xF7_USB.AlarmStatus">
             <summary>
             报警状态
+            </summary>
+        </member>
+        <member name="T:JT808.Protocol.Extensions.JTActiveSafety.Metadata.JT808_0x0900_0xF8_USB">
+            <summary>
+            
             </summary>
         </member>
         <member name="P:JT808.Protocol.Extensions.JTActiveSafety.Metadata.JT808_0x0900_0xF8_USB.USBID">

@@ -9,6 +9,9 @@ using System.Text;
 
 namespace JTActiveSafety.Protocol.MessagePack
 {
+    /// <summary>
+    /// 
+    /// </summary>
     ref struct JTActiveSafetyMessagePackReader
     {
         public ReadOnlySpan<byte> Reader { get; private set; }

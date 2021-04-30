@@ -15,7 +15,13 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
     /// </summary>
     public class JT808_0x0200_0x67 : JT808_0x0200_BodyBase, IJT808MessagePackFormatter<JT808_0x0200_0x67>, IJT808Analyze
     {
+        /// <summary>
+        /// 盲区监测系统报警信息Id
+        /// </summary>
         public override byte AttachInfoId { get; set; } = JT808_JTActiveSafety_Constants.JT808_0X0200_0x67;
+        /// <summary>
+        /// 盲区监测系统报警信息长度
+        /// </summary>
         public override byte AttachInfoLength { get; set; } = 26;
         /// <summary>
         /// 报警ID
@@ -63,7 +69,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
         /// 报警标识号
         /// </summary>
         public AlarmIdentificationProperty AlarmIdentification { get; set; }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <param name="writer"></param>
+        /// <param name="config"></param>
         public void Analyze(ref JT808MessagePackReader reader, Utf8JsonWriter writer, IJT808Config config)
         {
             JT808_0x0200_0x67 value = new JT808_0x0200_0x67();
@@ -203,7 +214,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
             writer.WriteNumber($"[{value.AlarmIdentification.AttachCount.ReadNumber()}]附件数量", value.AlarmIdentification.AttachCount);
             writer.WriteNumber($"[{value.AlarmIdentification.Retain.ReadNumber()}]预留", value.AlarmIdentification.Retain);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <param name="config"></param>
+        /// <returns></returns>
         public JT808_0x0200_0x67 Deserialize(ref JT808MessagePackReader reader, IJT808Config config)
         {
             JT808_0x0200_0x67 value = new JT808_0x0200_0x67();
@@ -229,7 +245,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
             };
             return value;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="writer"></param>
+        /// <param name="value"></param>
+        /// <param name="config"></param>
         public void Serialize(ref JT808MessagePackWriter writer, JT808_0x0200_0x67 value, IJT808Config config)
         {
             writer.WriteByte(value.AttachInfoId);

@@ -15,7 +15,13 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
     /// </summary>
     public class JT808_0x0200_0x66 : JT808_0x0200_BodyBase, IJT808MessagePackFormatter<JT808_0x0200_0x66>, IJT808Analyze
     {
+        /// <summary>
+        /// 胎压监测系统报警信息Id
+        /// </summary>
         public override byte AttachInfoId { get; set; } = JT808_JTActiveSafety_Constants.JT808_0X0200_0x66;
+        /// <summary>
+        /// 胎压监测系统报警信息长度
+        /// </summary>
         public override byte AttachInfoLength { get; set; }
         /// <summary>
         /// 报警ID
@@ -63,7 +69,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
         /// 报警/事件信息列表
         /// </summary>
         public List<AlarmOrEventProperty> AlarmOrEvents { get; set; }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <param name="writer"></param>
+        /// <param name="config"></param>
         public void Analyze(ref JT808MessagePackReader reader, Utf8JsonWriter writer, IJT808Config config)
         {
             JT808_0x0200_0x66 value = new JT808_0x0200_0x66();
@@ -212,7 +223,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
                 writer.WriteEndArray();
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <param name="config"></param>
+        /// <returns></returns>
         public JT808_0x0200_0x66 Deserialize(ref JT808MessagePackReader reader, IJT808Config config)
         {
             JT808_0x0200_0x66 value = new JT808_0x0200_0x66();
@@ -251,7 +267,12 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.MessageBody
             }
             return value;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="writer"></param>
+        /// <param name="value"></param>
+        /// <param name="config"></param>
         public void Serialize(ref JT808MessagePackWriter writer, JT808_0x0200_0x66 value, IJT808Config config)
         {
             writer.WriteByte(value.AttachInfoId);

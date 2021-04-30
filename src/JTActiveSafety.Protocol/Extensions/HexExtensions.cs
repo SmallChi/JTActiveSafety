@@ -9,6 +9,12 @@ namespace JTActiveSafety.Protocol.Extensions
     /// </summary>
     public static partial class HexExtensions
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="separator"></param>
+        /// <returns></returns>
         public static string ToHexString(this byte[] source, string separator = " ")
         {
             var value = source.Select(s => s.ToString("X2"));
@@ -35,51 +41,117 @@ namespace JTActiveSafety.Protocol.Extensions
             }
             return buf;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="format"></param>
+        /// <returns></returns>
         public static string ReadNumber(this byte value, string format = "X2")
         {
             return value.ToString(format);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="format"></param>
+        /// <returns></returns>
         public static string ReadNumber(this int value, string format = "X8")
         {
             return value.ToString(format);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="format"></param>
+        /// <returns></returns>
         public static string ReadNumber(this uint value, string format = "X8")
         {
             return value.ToString(format);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="format"></param>
+        /// <returns></returns>
         public static string ReadNumber(this long value, string format = "X16")
         {
             return value.ToString(format);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="format"></param>
+        /// <returns></returns>
         public static string ReadNumber(this ulong value, string format = "X16")
         {
             return value.ToString(format);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="format"></param>
+        /// <returns></returns>
         public static string ReadNumber(this short value, string format = "X4")
         {
             return value.ToString(format);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="format"></param>
+        /// <returns></returns>
         public static string ReadNumber(this ushort value, string format = "X4")
         {
             return value.ToString(format);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static ReadOnlySpan<char> ReadBinary(this ushort value)
         {
             return System.Convert.ToString(value, 2).PadLeft(16, '0').AsSpan();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static ReadOnlySpan<char> ReadBinary(this short value)
         {
             return System.Convert.ToString(value, 2).PadLeft(16, '0').AsSpan();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static ReadOnlySpan<char> ReadBinary(this uint value)
         {
             return System.Convert.ToString(value, 2).PadLeft(32, '0').AsSpan();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static ReadOnlySpan<char> ReadBinary(this int value)
         {
             return System.Convert.ToString(value, 2).PadLeft(32, '0').AsSpan();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static ReadOnlySpan<char> ReadBinary(this byte value)
         {
             return System.Convert.ToString(value, 2).PadLeft(8, '0').AsSpan();

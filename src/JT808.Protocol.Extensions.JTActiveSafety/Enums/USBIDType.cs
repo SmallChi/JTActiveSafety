@@ -4,6 +4,9 @@ using System.Text;
 
 namespace JT808.Protocol.Extensions.JTActiveSafety.Enums
 {
+    /// <summary>
+    /// USB编号类型
+    /// </summary>
     public enum USBIDType:byte
     {
         /// <summary>

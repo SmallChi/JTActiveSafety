@@ -15,7 +15,7 @@ namespace JT808.Protocol.Extensions.JTActiveSafety.Metadata
         public byte FileNameLength { get; set; }
         /// <summary>
         /// 文件名称
-        /// <文件类型>_<通道号>_<报警类型>_<序号>_<报警编号>.<后缀名>
+        /// 形如：文件类型_通道号_报警类型_序号_报警编号.后缀名
         /// </summary>
         public string FileName{ get; set; }
         /// <summary>

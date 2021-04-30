@@ -4,6 +4,9 @@ using System.Text;
 
 namespace JT808.Protocol.Extensions.JTActiveSafety
 {
+    /// <summary>
+    /// 主动安全常量
+    /// </summary>
     public static class JT808_JTActiveSafety_Constants
     {
         /// <summary>
