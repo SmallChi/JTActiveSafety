@@ -16,7 +16,7 @@
     <license>https://github.com/SmallChi/JTActiveSafety/blob/master/LICENSE</license>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <DocumentationFile>JT808.Protocol.Extensions.JTActiveSafety.xml</DocumentationFile>
-    <Version>1.1.6</Version>
+    <Version>1.1.7</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="JT808" Version="2.3.9" />
+    <PackageReference Include="JT808" Version="2.4.0" />
   </ItemGroup>
 
 
