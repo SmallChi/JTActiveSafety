@@ -19,7 +19,3 @@ jobs:
       run: dotnet restore ./src/JTActiveSafety.sln
     - name: dotnet JTActiveSafety.Protocol build
       run: dotnet build ./src/JTActiveSafety.Protocol.Test/JTActiveSafety.Protocol.Test.csproj
-    - name: dotnet JT808.Protocol.Extensions.JTActiveSafety build
-      run: dotnet test ./src/JT808.Protocol.Extensions.JTActiveSafety.Test/JT808.Protocol.Extensions.JTActiveSafety.Test.csproj
-    - name: dotnet JT808.Protocol.Extensions.JTActiveSafety test
-      run: dotnet test ./src/JT808.Protocol.Extensions.JTActiveSafety.Test/JT808.Protocol.Extensions.JTActiveSafety.Test.csproj
