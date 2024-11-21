@@ -11,5 +11,5 @@ JTActiveSafety协议、道路运输车辆主动安全智能防控系统-主动�
 
 | Package Name          | Version                                            | Downloads|                                     Remark      |
 | --------------------- | -------------------------------------------------- | --------------------------------------------------- |--------------------------------------------------- |
-| Install-Package JTActiveSafety| ![JTActiveSafety](https://img.shields.io/nuget/v/JTActiveSafety.svg) | ![JT808](https://img.shields.io/nuget/dt/JTActiveSafety.svg) |主动安全的附件协议|
+| Install-Package JTActiveSafety| ![JTActiveSafety](https://img.shields.io/nuget/v/JTActiveSafety.svg) | ![JTActiveSafety](https://img.shields.io/nuget/dt/JTActiveSafety.svg) |主动安全的附件协议|
 

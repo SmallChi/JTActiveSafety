@@ -6,7 +6,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Encodings.Web;
 using System.Text.Json;
+using System.Text.Unicode;
 
 namespace JTActiveSafety.Protocol
 {
@@ -28,7 +30,7 @@ namespace JTActiveSafety.Protocol
             {
                 JTActiveSafetyMessagePackWriter writer = new JTActiveSafetyMessagePackWriter(buffer);
                 writer.WriteUInt32(package.FH_Flag);
-                writer.WriteString(package.FileName.PadLeft(50, '\0'));
+                writer.WriteString(package.FileName.PadRight(50, '\0'));
                 writer.WriteUInt32(package.Offset);
                 writer.WriteUInt32((uint)package.Bodies.Length);
                 writer.WriteArray(package.Bodies);
