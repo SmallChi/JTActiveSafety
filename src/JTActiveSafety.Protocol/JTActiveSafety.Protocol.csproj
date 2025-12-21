@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net9.0</TargetFrameworks>
+    <TargetFrameworks>net10.0</TargetFrameworks>
     <LangVersion>13.0</LangVersion>
     <Copyright>Copyright 2019.</Copyright>
     <Authors>SmallChi(Koike)</Authors>
@@ -16,7 +16,7 @@
     <license>https://github.com/SmallChi/JTActiveSafety/blob/master/LICENSE</license>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <DocumentationFile>JTActiveSafety.Protocol.xml</DocumentationFile>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
   <ItemGroup>
